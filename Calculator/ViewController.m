@@ -123,6 +123,8 @@ typedef enum opr Operator;//어떤 타입을 또다른 이름으로 정의하는
     calc = [[Calculator alloc] init];
     currentOpr = none;
     currentValue = 0;
+    
+    self.myLabel.text = @"0"; //첫 화면에서 Label이라고 안 뜨게
 }
 
 - (void)didReceiveMemoryWarning {
