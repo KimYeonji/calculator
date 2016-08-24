@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Calculator.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 여기서 초기화를 한다는거지????
+    
+    Calculator *calc = [[Calculator alloc] init];
+    [calc setAccumulator:100.0]; //property선언을 했는데도 setter, getter를 사용할 수 있어
+    [calc add:200];
+    NSLog(@"Result = %g", [calc accumulator]);
+    
     return YES;
 }
 
